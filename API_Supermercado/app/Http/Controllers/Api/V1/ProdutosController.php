@@ -26,7 +26,6 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        // Validação dos dados recebidos
         $validator = Validator::make($request->all(), [
             'nome' => 'required|string|max:255',
             'preco' => 'required|numeric',
@@ -35,7 +34,6 @@ class ProdutosController extends Controller
             'foto' => 'nullable|string|max:255',
         ]);
 
-        // Verifica se a validação falhou
         if ($validator->fails()) {
             return $this->error('Dados inválidos', 422, $validator->errors());
         }
@@ -101,7 +99,6 @@ class ProdutosController extends Controller
             return $this->error('Produto não encontrado', 404);
         }
 
-        // Tenta deletar o usuário
         $deleted = $produtos->delete();
 
         if ($deleted) {

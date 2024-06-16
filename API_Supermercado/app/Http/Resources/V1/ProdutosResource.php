@@ -18,7 +18,7 @@ class ProdutosResource extends JsonResource
         return [
             'id' => $this->id,
             'Nome' => $this->nome,
-            'Preço' => $this->preco, // Retorna o preço sem formatação adicional
+            'Preço' => $this->preco,
             'Tipo' => $this->tipo,
             'Quantidade' => $this->quantidade,
             'Foto' => $this->foto,

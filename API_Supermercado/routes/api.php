@@ -12,8 +12,8 @@ use App\Http\Controllers\TesteController;
 //})->middleware('auth:sanctum');
 
 Route::get('/users', [UserController::class, 'index']);
-Route::post('/users', [UserController::class, 'store']);  //Cadastrar User
-Route::post('/login', [AuthController::class, 'login']);  //Login User
+Route::post('/users', [UserController::class, 'store']);  
+Route::post('/login', [AuthController::class, 'login']);  
 
 
 Route::middleware('auth:sanctum')->group(function(){

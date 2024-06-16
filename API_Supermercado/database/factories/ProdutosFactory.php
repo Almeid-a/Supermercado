@@ -22,7 +22,7 @@ class ProdutosFactory extends Factory
             'preco' => $this->faker->randomFloat(2, 1, 100),
             'tipo' => $this->faker->word,
             'quantidade' => $this->faker->numberBetween(1, 100),
-            'foto' => 'imagem_' . $this->faker->numberBetween(1, 10) . '.jpg', // Nome fictício de imagem
+            'foto' => 'imagem_' . $this->faker->numberBetween(1, 10) . '.jpg',
             'created_at' => Carbon::now()->setTimezone('America/Sao_Paulo'),
             'updated_at' => Carbon::now()->setTimezone('America/Sao_Paulo'),
         ];

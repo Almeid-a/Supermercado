@@ -21,14 +21,12 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        // Validação dos dados recebidos
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6'
         ]);
 
-        // Verifica se a validação falhou
         if ($validator->fails()) {
             return $this->error('Dados inválidos ou Faltando', 422, $validator->errors());
         }

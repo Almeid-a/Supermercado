@@ -9,10 +9,8 @@ class Produtos extends Model
 {
     use HasFactory;
 
-    // Definindo o nome da tabela associada ao modelo
     protected $table = 'produtos';
 
-    // Colunas que podem ser preenchidas em massa
     protected $fillable = [
         'nome', 
         'preco', 
